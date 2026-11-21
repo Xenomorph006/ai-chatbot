@@ -8,6 +8,7 @@ export default function App() {
   const [user, setUser] = useState(undefined) // undefined = still checking
 
   useEffect(() => onAuthStateChanged(auth, setUser), [])
+  useEffect(() => { fetch('/api/health').catch(() => {}) }, [])
 
   if (user === undefined) return <div className="center muted">Loading…</div>
   if (!user) return <Login />
