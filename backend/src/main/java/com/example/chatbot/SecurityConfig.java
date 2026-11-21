@@ -21,7 +21,7 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(a -> a
-                .requestMatchers("/error").permitAll()
+                .requestMatchers("/error","/api/health").permitAll()
                 .anyRequest().authenticated())
             .exceptionHandling(e -> e.authenticationEntryPoint(
                 new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)))
