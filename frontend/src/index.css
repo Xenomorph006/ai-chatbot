@@ -1,0 +1,19 @@
+:root {
+  --bg: #0b0b0c;
+  --panel: #111113;
+  --border: #232326;
+  --text: #e8e8ea;
+  --muted: #8b8b92;
+  --accent: #6e8bff;
+  --user: #1b1d26;
+}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button, textarea { font: inherit; color: inherit; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
